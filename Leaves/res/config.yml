@@ -1,0 +1,6 @@
+delta_up: 14
+delta_down: 2
+redistribute: 50
+reprocess: 50
+replant: 10
+plant_chance: 40

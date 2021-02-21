@@ -1,0 +1,11 @@
+name: Leaves
+version: 1.0.5
+main: com.rappelr.leaves.Leaves
+authors: [Rappelr]
+api-version: 1.14
+load: POSTWORLD
+description: A falling dust particle plugin for SMP servers
+commands:
+  leavesreload:
+    description: Reload leaves plugin configuration
+    usage: /leavesreload
