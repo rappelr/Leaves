@@ -1,6 +1,26 @@
-delta_up: 14
-delta_down: 2
-redistribute: 50
-reprocess: 50
-replant: 10
+# Configuration for Leaves v1.1.0
+# By Rappelr#2228
+#
+# vertical distance from player leaf particles should be spawned at (in blocks)
+vertical_offset:
+  up: 14
+  down: 2
+#
+# process speed configuration (all in ticks)
+# redistribute: speed at which chunks are reassigned to players
+# reprocess: speed at which leaf block positions are recalculated
+# replant: speed at which new leaf particles are spawned
+process:
+  redistribute: 50
+  reprocess: 50
+  replant: 10
+#
+# chance (out of 100) a particle should be spawned every replant
 plant_chance: 40
+#
+# particle color settings
+# by default all colors are set to the leaf block they originated from
+# example usage:
+#   BIRCH_LEAVES: YELLOW_WOOL
+# find a list of materials at hub.spigotmc.org/javadocs/spigot/org/bukkit/Material.html
+colors:

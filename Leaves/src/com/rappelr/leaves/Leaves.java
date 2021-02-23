@@ -3,9 +3,9 @@ package com.rappelr.leaves;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import com.rappelr.leaves.command.CommandExecutor;
 import com.rappelr.leaves.config.Configuration;
 import com.rappelr.leaves.map.LeafMap;
-import com.rappelr.leaves.spigot.CommandExecutor;
 
 import lombok.Getter;
 

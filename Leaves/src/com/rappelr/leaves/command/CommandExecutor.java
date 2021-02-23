@@ -1,8 +1,9 @@
-package com.rappelr.leaves.spigot;
+package com.rappelr.leaves.command;
 
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
+import org.bukkit.entity.Player;
 
 import com.rappelr.leaves.Leaves;
 
@@ -19,9 +20,16 @@ public class CommandExecutor implements org.bukkit.command.CommandExecutor {
 			return true;
 		}
 		
-		sender.sendMessage(ChatColor.RED + tag + " Reloading...");
+		if(sender instanceof Player)
+			sender.sendMessage(ChatColor.RED + tag + " Reloading...");
+		Leaves.getInstance().getLogger().info("reloading...");
+		
 		Leaves.getInstance().reload();
-		sender.sendMessage(ChatColor.GREEN + tag + " Reload complete!");
+		
+		Leaves.getInstance().getLogger().info("reload complete!");
+		if(sender instanceof Player)
+			sender.sendMessage(ChatColor.GREEN + tag + " Reload complete!");
+		
 		return true;
 	}
 	

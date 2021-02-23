@@ -29,7 +29,7 @@ public class LeafMap {
 	{
 		types = new LeafTypes();
 		map = new ArrayList<LeafChunk>();
-		
+
 		reload();
 	}
 
@@ -126,9 +126,11 @@ public class LeafMap {
 		
 		removeProcesses();
 		
-		redistributeSpeed = Leaves.getInstance().getConfiguration().getSource().getLong("redistribute", redistributeSpeed);
-		reprocessSpeed = Leaves.getInstance().getConfiguration().getSource().getLong("reprocess", reprocessSpeed);
-		replantSpeed = Leaves.getInstance().getConfiguration().getSource().getLong("replant", replantSpeed);
+		types.reload();
+		
+		redistributeSpeed = Leaves.getInstance().getConfiguration().getSource().getLong("process.redistribute", redistributeSpeed);
+		reprocessSpeed = Leaves.getInstance().getConfiguration().getSource().getLong("process.reprocess", reprocessSpeed);
+		replantSpeed = Leaves.getInstance().getConfiguration().getSource().getLong("process.replant", replantSpeed);
 		
 		LeafChunk.reload();
 		

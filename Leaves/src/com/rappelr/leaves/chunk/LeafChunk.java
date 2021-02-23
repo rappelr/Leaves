@@ -181,8 +181,8 @@ public class LeafChunk {
 	}	
 	
 	public static void reload() {
-		LeafChunk.dUp = Leaves.getInstance().getConfiguration().getSource().getInt("delta_up", LeafChunk.dUp);
-		LeafChunk.dDown = Leaves.getInstance().getConfiguration().getSource().getInt("delta_down", LeafChunk.dDown);
+		LeafChunk.dUp = Leaves.getInstance().getConfiguration().getSource().getInt("vertical_offset.up", LeafChunk.dUp);
+		LeafChunk.dDown = Leaves.getInstance().getConfiguration().getSource().getInt("vertical_offset.down", LeafChunk.dDown);
 		LeafChunk.plantChance = Leaves.getInstance().getConfiguration().getSource().getInt("plant_chance", LeafChunk.plantChance);
 		dTotal = dDown + dUp;
 	}
