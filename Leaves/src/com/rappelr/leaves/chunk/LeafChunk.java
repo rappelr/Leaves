@@ -53,7 +53,7 @@ public class LeafChunk {
 				() -> aReprocess(world.getChunkAt(x, z).getChunkSnapshot()));
 	}
 
-	private void aReprocess(ChunkSnapshot snapchot) {
+	private void aReprocess(ChunkSnapshot snapshot) {
 		spots.clear();
 		
 		final List<Level> levels = calculateLevels(players);
@@ -63,7 +63,7 @@ public class LeafChunk {
 				boolean fAir = false;
 				
 				for(int y = (l.from < 0 ? 0 : l.from); y < l.to && y < 255; y++) {
-					Material n = snapchot.getBlockType(x, y, z);
+					Material n = snapshot.getBlockType(x, y, z);
 
 					if(n == null)
 						continue;
